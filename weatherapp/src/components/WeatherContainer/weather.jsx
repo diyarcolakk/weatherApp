@@ -5,6 +5,7 @@ import "./weather.css";
 const Weather = () => {
   const { weatherInfo } = useContext(GlobalContext);
 
+  //Options for date time , i will calculate day with toLocaleString function
   const options = {
     weekday: "long",
     year: "numeric",

@@ -2,12 +2,15 @@ import { createContext } from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+//Context file
+
 export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [cityName, setCityName] = useState("İstanbul");
   const [weatherInfo, setWeatherInfo] = useState();
 
+  //Getting data from endpoint
   const key = "f93a7148e53efb42607314a9a2c72830";
   const fetchData = async () => {
     const weatherData = await axios(
