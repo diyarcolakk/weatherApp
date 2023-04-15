@@ -6,22 +6,25 @@ export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
   const [cityName, setCityName] = useState("İstanbul");
-  const [data, setData] = useState([]);
+  const [weatherInfo, setWeatherInfo] = useState();
 
   const key = "f93a7148e53efb42607314a9a2c72830";
   const fetchData = async () => {
     const weatherData = await axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&lang=tr&appid=${key}`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&lang=tr&appid=${key}`
     );
-    setData(weatherData);
+    const newData = weatherData.data.list.filter(
+      (perListDate, index) => index % 8 === 0
+    );
+    setWeatherInfo(newData);
   };
 
   useEffect(() => {
     fetchData();
-  }, [data]);
+  }, [cityName]);
 
   const values = {
-    data,
+    weatherInfo,
     setCityName,
     cityName,
   };

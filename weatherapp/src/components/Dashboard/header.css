@@ -1,0 +1,15 @@
+.headerClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.selectClass {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+}

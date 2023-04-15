@@ -1,6 +1,10 @@
+import Weather from "./weather"
+import "./container.css"
 const Container = () => {
   return (
-    <div>Container</div>
+    <div className="showWeather">
+      <Weather />
+    </div>
   )
 }
 export default Container

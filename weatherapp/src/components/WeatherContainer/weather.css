@@ -1,0 +1,22 @@
+.weatherContainer {
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 130px;
+  line-height: 3;
+  padding: 2rem;
+}
+
+.currentDate {
+  border: 1px solid yellow;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 130px;
+  line-height: 3;
+  padding: 2rem;
+}
